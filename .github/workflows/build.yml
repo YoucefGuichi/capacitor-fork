@@ -58,8 +58,7 @@ jobs:
       env:
         VERSION: "ci-build"
 
-    - name: Log into registry ${{ env.REGISTRY }}
-      if: github.event_name != 'pull_request'
+    - name: Log into registry
       uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
       with:
         registry: ghcr.io
